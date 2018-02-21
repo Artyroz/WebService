@@ -1,0 +1,51 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Feb 21, 2018 at 06:03 PM
+-- Server version: 5.6.35
+-- PHP Version: 7.1.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `Webservice`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `login` varchar(55) NOT NULL,
+  `passe` varchar(255) NOT NULL,
+  `token` varchar(15) NOT NULL,
+  `rank` int(11) NOT NULL DEFAULT '0',
+  `email` varchar(255) NOT NULL,
+  `valide` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
